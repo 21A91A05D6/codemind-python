@@ -1,21 +1,19 @@
 n=int(input())
-a=list(map(int,input().split()))
-count=0
+l=list(map(int,input().split()))
 c=0
-l=[]
-for i in range(0,n):
-    k=a[i]
-    while k>0:
-        d=k%10 #3
-        count+=1
-        k=k//10
-    l.append(count)
-    count=0
-b=min(l)
-for i in range(0,n):
-    if l[i]==b:
+count=0
+k=[]
+for i in l:
+    
+    while(i):
+        d=i%10
         c+=1
-print(c)
+        i=i//10
         
-        
-        
+    k.append(c)
+    c=0
+v=min(k)
+for j in k:
+    if j==v:
+        count+=1
+print(count)
